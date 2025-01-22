@@ -1,0 +1,52 @@
+baseURL = "https://github.com/Tanner202/blog"
+languageCode = "en-us"
+title = "Tanner's Blog"
+theme = "paper_mod"
+
+[params.profileMode]
+enabled = true
+imageUrl = "https://avatars.githubusercontent.com/u/96085009?s=96&v=4" # optional
+#imageTitle = "<title of image as alt>" # optional
+imageWidth = 120 # custom size
+imageHeight = 120 # custom size
+
+[[params.profileMode.buttons]]
+name = "Archives"
+url = "/archives"
+
+[[params.profileMode.buttons]]
+name = "Github"
+url = "https://github.com/Tanner202"
+
+
+[params.cover]
+linkFullImages = true
+
+[params]
+ShowBreadCrumbs = true
+ShowReadingTime = true
+comments = true
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 12
+
+[[menu.main]]
+identifier = "archives"
+name = "Archives"
+url = "/archives/"
+weight = 15
+
+[[menu.main]]
+identifier = "contact"
+name = "Contact"
+url = "/contact/"
+weight = 16

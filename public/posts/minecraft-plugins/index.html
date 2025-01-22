@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Minecraft Server and Plugin Development | Tanner&#39;s Blog</title>
+<meta name="keywords" content="Minecraft, Plugins">
+<meta name="description" content="In this blog post I talk about my experience learning to create Minecraft Servers and Plugins.
+Backstory As a kid I played a lot of video games. I mainly played Minecraft on online servers like Mineplex and Hypixel. During these days everything was fun and exciting. As I got older these servers started to fade away and things changed. However my love for those exeriences hadn&rsquo;t gone away. This is when I made the decision that I wanted to create my own server.">
+<meta name="author" content="">
+<link rel="canonical" href="https://github.com/Tanner202/blog/posts/minecraft-plugins/">
+<link crossorigin="anonymous" href="/Tanner202/blog/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://github.com/Tanner202/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://github.com/Tanner202/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://github.com/Tanner202/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://github.com/Tanner202/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://github.com/Tanner202/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://github.com/Tanner202/blog/posts/minecraft-plugins/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Minecraft Server and Plugin Development" />
+<meta property="og:description" content="In this blog post I talk about my experience learning to create Minecraft Servers and Plugins.
+Backstory As a kid I played a lot of video games. I mainly played Minecraft on online servers like Mineplex and Hypixel. During these days everything was fun and exciting. As I got older these servers started to fade away and things changed. However my love for those exeriences hadn&rsquo;t gone away. This is when I made the decision that I wanted to create my own server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://github.com/Tanner202/blog/posts/minecraft-plugins/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-07T09:25:15-08:00" />
+<meta property="article:modified_time" content="2024-03-07T09:25:15-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Minecraft Server and Plugin Development"/>
+<meta name="twitter:description" content="In this blog post I talk about my experience learning to create Minecraft Servers and Plugins.
+Backstory As a kid I played a lot of video games. I mainly played Minecraft on online servers like Mineplex and Hypixel. During these days everything was fun and exciting. As I got older these servers started to fade away and things changed. However my love for those exeriences hadn&rsquo;t gone away. This is when I made the decision that I wanted to create my own server."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://github.com/Tanner202/blog/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Minecraft Server and Plugin Development",
+      "item": "https://github.com/Tanner202/blog/posts/minecraft-plugins/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Minecraft Server and Plugin Development",
+  "name": "Minecraft Server and Plugin Development",
+  "description": "In this blog post I talk about my experience learning to create Minecraft Servers and Plugins.\nBackstory As a kid I played a lot of video games. I mainly played Minecraft on online servers like Mineplex and Hypixel. During these days everything was fun and exciting. As I got older these servers started to fade away and things changed. However my love for those exeriences hadn\u0026rsquo;t gone away. This is when I made the decision that I wanted to create my own server.",
+  "keywords": [
+    "Minecraft", "Plugins"
+  ],
+  "articleBody": "In this blog post I talk about my experience learning to create Minecraft Servers and Plugins.\nBackstory As a kid I played a lot of video games. I mainly played Minecraft on online servers like Mineplex and Hypixel. During these days everything was fun and exciting. As I got older these servers started to fade away and things changed. However my love for those exeriences hadn’t gone away. This is when I made the decision that I wanted to create my own server. I wanted to see what it was like to be on the other side of the game: the development side.\nServer Development Factions At first when I was creating a minecraft server I mostly used online plugins and maps. I didn’t know much at the time but I knew that I wanted to make something! I convinced one of my friends to help me out and we got to work. Originally, we decided we were going to make a factions server. Looking back it’s a little ambitious but we were excited and that’s all that mattered. My friend who was a factions expert from playing on a server called CosmicPvP helped balance the shop and figure out what we needed. We worked hard on building the spawn, configuring faction plugins, and creating the shop. Despite our efforts at some point or another we stopped working on the project. We might have figured out that it was over ambitious or that we wouldn’t be able to get enough players for such a big gamemode. With that, was this the end? A shortlived thrill?\nKit PvP Factions was only the beginning. After a break we moved on to creating a kitpvp server which I still think was a good idea because of its simplicity. This time we had some knowledge and again we repeated the process of building maps, configuring plugins, and this time we created a discord server. Unlike last time, this time we actually released the server online! We posted our server on many websites. We were at the bottom of the lists but we were still there! Somehow a group of people found our server and joined. We were ecstatic and we did some pvp and it was a lot of fun. We had made our own server and created a memorable experience! What a success. What could go wrong?\nSkyblock Things went wrong. Despite gaining a few players initially it didn’t take long for the server to die. After this we decided the best idea to create a skyblock server (I guess we didn’t learn anything from creating a factions server). This was my favorite gamemode so I wanted to see what I could do. It was at this point as well that I decided it was a good idea to create a staff team. We wanted to go big! Young naive me started looking online for people who wanted to join. After some time I found a couple people who were interested and we all started working on the server despite me having no experience managing other people let alone barely being able to manage myself. Together we created a discord, configured the gamemode, and more. The novel factor of this factor was supposed to be the adventure. The adventure was an area where players could explore, fight mobs, and loot! It was something I poured a lot of time into creating. I learned how to sculpt a map, create custom mobs, and randomized loot. Despite the success of the creation of the skyblock server we never ended up releasing it to the public. I can’t remember why but it was most likely due to not being able to finish such an ambitious project and keep the team together. Although this was the end of my time creating servers it allowed me to find a new path.\nPlugin Development When I was creating these servers I conistently wondered how people create the plugins that I used. I was curious but too scared to start doing anything. I remember asking my brother to create a plugin once for me since he knew how to create minecraft plugins and I didn’t. Eventually after getting tired of begging my brother to work on the project I decided to learn how to do it myself. At the time, it was a little overwhelming but I followed an online course on udemy called “Develop Minecraft Plugins (Java)” by Stephen King. I loved this course. As a person who rarely coded prior to following this course it felt so cool that I was able to make changes so easily and see them happen in-game. After learning the basics and going through the majority of the course I got to the most exciting section: minigames. This section was culmination of all the skills gathered in the course and allowed developers to create the games that people love to play. Creating minigames involved many different parts and wasn’t as easy as I thought but I created my first minigame of tag. It may sound pretty boring and insignificant but for me at the time this felt truely revolutionary! Knowing that this wouldn’t exist without me was part of what made it feel so amazing. It gave me a purpose. I then got to play it with my brother and it was actually quite a bit of fun since I had also built a map for the game and added powerups. After this I then started working on a way more ambitious project called Intergalactic based on the server called Island Clash which was a minecraft version of clash of clans with the elements from another popular minecraft gamemode called eggwars. Similar to how the servers went I took on more than I could carry. During this time I was transitioning into high school and with how busy it was I stopped plugin development for a while.\nToday My minecraft development experience contained a lot of failure but also allowed for a lot of learning and joy. Another high note is that earlier this year I created a custom plugin which I will most likely share in another article. I hope you enjoyed reading my first ever post. If you have any comments, questions, or want to collaborate please reach out to me! I’d be more than happy to talk about anything minecraft development or game development related.\n",
+  "wordCount" : "1065",
+  "inLanguage": "en",
+  "datePublished": "2024-03-07T09:25:15-08:00",
+  "dateModified": "2024-03-07T09:25:15-08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://github.com/Tanner202/blog/posts/minecraft-plugins/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tanner's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://github.com/Tanner202/blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://github.com/Tanner202/blog/" accesskey="h" title="Tanner&#39;s Blog (Alt + H)">Tanner&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://github.com/Tanner202/blog/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Tanner202/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Tanner202/blog/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Tanner202/blog/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://github.com/Tanner202/blog/">Home</a>&nbsp;»&nbsp;<a href="https://github.com/Tanner202/blog/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Minecraft Server and Plugin Development
+    </h1>
+    <div class="post-meta"><span title='2024-03-07 09:25:15 -0800 PST'>March 7, 2024</span>&nbsp;·&nbsp;5 min
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>In this blog post I talk about my experience learning to create Minecraft Servers and Plugins.</strong></p>
+<hr>
+<h1 id="backstory">Backstory<a hidden class="anchor" aria-hidden="true" href="#backstory">#</a></h1>
+<p>As a kid I played a lot of video games. I mainly played Minecraft on online servers like Mineplex and Hypixel. During these days everything was fun and exciting. As I got older these servers started to fade away and things changed. However my love for those exeriences hadn&rsquo;t gone away. This is when I made the decision that I wanted to create my own server. I wanted to see what it was like to be on the other side of the game: the development side.</p>
+<h1 id="server-development">Server Development<a hidden class="anchor" aria-hidden="true" href="#server-development">#</a></h1>
+<h2 id="factions">Factions<a hidden class="anchor" aria-hidden="true" href="#factions">#</a></h2>
+<p>At first when I was creating a minecraft server I mostly used online plugins and maps. I didn&rsquo;t know much at the time but I knew that I wanted to make something! I convinced one of my friends to help me out and we got to work. Originally, we decided we were going to make a <a href="https://www.example.com">factions server</a>. Looking back it&rsquo;s a little ambitious but we were excited and that&rsquo;s all that mattered. My friend who was a factions expert from playing on a server called <a href="https://www.example.com">CosmicPvP</a> helped balance the shop and figure out what we needed. We worked hard on building the spawn, configuring faction plugins, and creating the shop. Despite our efforts at some point or another we stopped working on the project. We might have figured out that it was over ambitious or that we wouldn&rsquo;t be able to get enough players for such a big gamemode. With that, was this the end? A shortlived thrill?</p>
+<h2 id="kit-pvp">Kit PvP<a hidden class="anchor" aria-hidden="true" href="#kit-pvp">#</a></h2>
+<p>Factions was only the beginning. After a break we moved on to creating a <a href="https://www.example.com">kitpvp</a> server which I still think was a good idea because of its simplicity. This time we had some knowledge and again we repeated the process of building maps, configuring plugins, and this time we created a discord server. Unlike last time, this time we actually released the server online! We posted our server on many websites. We were at the bottom of the lists but we were still there! Somehow a group of people found our server and joined. We were ecstatic and we did some pvp and it was a lot of fun. We had made our own server and created a memorable experience! What a success. What could go wrong?</p>
+<h2 id="skyblock">Skyblock<a hidden class="anchor" aria-hidden="true" href="#skyblock">#</a></h2>
+<p>Things went wrong. Despite gaining a few players initially it didn&rsquo;t take long for the server to die. After this we decided the best idea to create a <a href="https://www.example.com">skyblock</a> server (I guess we didn&rsquo;t learn anything from creating a factions server). This was my favorite gamemode so I wanted to see what I could do. It was at this point as well that I decided it was a good idea to create a staff team. We wanted to go big! Young naive me started looking online for people who wanted to join. After some time I found a couple people who were interested and we all started working on the server despite me having no experience managing other people let alone barely being able to manage myself. Together we created a discord, configured the gamemode, and more. The novel factor of this factor was supposed to be the adventure. The adventure was an area where players could explore, fight mobs, and loot! It was something I poured a lot of time into creating. I learned how to sculpt a map, create custom mobs, and randomized loot. Despite the success of the creation of the skyblock server we never ended up releasing it to the public. I can&rsquo;t remember why but it was most likely due to not being able to finish such an ambitious project and keep the team together. Although this was the end of my time creating servers it allowed me to find a new path.</p>
+<h1 id="plugin-development">Plugin Development<a hidden class="anchor" aria-hidden="true" href="#plugin-development">#</a></h1>
+<p>When I was creating these servers I conistently wondered how people create the plugins that I used. I was curious but too scared to start doing anything. I remember asking my brother to create a plugin once for me since he knew how to create minecraft plugins and I didn&rsquo;t. Eventually after getting tired of begging my brother to work on the project I decided to learn how to do it myself. At the time, it was a little overwhelming but I followed an online course on <a href="https://www.example.com">udemy</a> called &ldquo;Develop Minecraft Plugins (Java)&rdquo; by Stephen King. I loved this course. As a person who rarely coded prior to following this course it felt so cool that I was able to make changes so easily and see them happen in-game. After learning the basics and going through the majority of the course I got to the most exciting section: minigames. This section was culmination of all the skills gathered in the course and allowed developers to create the games that people love to play. Creating minigames involved many different parts and wasn&rsquo;t as easy as I thought but I created my first minigame of tag. It may sound pretty boring and insignificant but for me at the time this felt truely revolutionary! Knowing that this wouldn&rsquo;t exist without me was part of what made it feel so amazing. It gave me a purpose. I then got to play it with my brother and it was actually quite a bit of fun since I had also built a map for the game and added powerups. After this I then started working on a way more ambitious project called Intergalactic based on the server called Island Clash which was a minecraft version of clash of clans with the elements from another popular minecraft gamemode called eggwars. Similar to how the servers went I took on more than I could carry. During this time I was transitioning into high school and with how busy it was I stopped plugin development for a while.</p>
+<h1 id="today">Today<a hidden class="anchor" aria-hidden="true" href="#today">#</a></h1>
+<p>My minecraft development experience contained a lot of failure but also allowed for a lot of learning and joy. Another high note is that earlier this year I created a custom plugin which I will most likely share in another article. I hope you enjoyed reading my first ever post. If you have any comments, questions, or want to collaborate please reach out to me! I&rsquo;d be more than happy to talk about anything minecraft development or game development related.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://github.com/Tanner202/blog/tags/minecraft/">Minecraft</a></li>
+      <li><a href="https://github.com/Tanner202/blog/tags/plugins/">Plugins</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="https://github.com/Tanner202/blog/">Tanner&#39;s Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
