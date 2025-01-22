@@ -1,0 +1,10 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/themes/paper_mod"]
+	path = themes/themes/paper_mod
+	url = https://github.com/adityatelange/hugo-PaperMod
+[submodule "public"]
+	path = public
+	url = https://github.com/Tanner202/tanner202.github.io.git
+	branch = main
