@@ -1,4 +1,4 @@
-baseURL = "https://github.com/Tanner202/blog"
+baseURL = "https://tanner202.github.io/"
 languageCode = "en-us"
 title = "Tanner's Blog"
 theme = "paper_mod"
