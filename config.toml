@@ -26,6 +26,9 @@ linkFullImages = true
 ShowBreadCrumbs = true
 ShowReadingTime = true
 comments = true
+ShowToc = true
+ShowPostNavLinks = false
+ShowCodeCopyButtons = true
 
 [[menu.main]]
 identifier = "categories"
