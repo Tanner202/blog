@@ -1,5 +1,5 @@
 +++
-title = '5 Game Development Mistakes that Cost me my Summer'
+title = '5 Game Development Mistakes that Derailed my Summer'
 date = 2025-03-27T07:58:39-07:00
 draft = false
 tags = ["Game Development Advice"]
